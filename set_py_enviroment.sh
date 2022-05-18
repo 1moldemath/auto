@@ -7,7 +7,7 @@ mkdir $DEFAULT_PATH
 
 # init git and setting main branch
 
-INITIATE_GIT=$( cd $DEFAULT_PATH && git init )
+INITIATE_GIT=$( cd $DEFAULT_PATH && git init && git checkout -b main )
 
 
 PYTHON_VERSION=$2
