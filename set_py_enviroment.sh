@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-sudo apt update
-
 # installing stack
 
 PIP=$( pip3 --version )
@@ -24,19 +22,15 @@ else
     echo 'virtualenv is already intalled.'
 fi
 
-# create directory
+# choose and create directory
 
 DEFAULT_PATH=~/Documents/$1
 mkdir $DEFAULT_PATH
 
-# init git and setting main branch
+# setup git and virtual environment
 
-INITIATE_GIT=$( cd $DEFAULT_PATH && git init && git checkout -b main )
+INITIATE_GIT=$( cd $DEFAULT_PATH && git init && git checkout -b main && virtualenv env )
 
-# install virtual env
-
-
-
-# 
+echo 'py project was created'
 
 exit
