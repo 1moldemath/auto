@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+sudo apt update
+
 # installing stack
 
 PIP=$( pip3 --version )
-sudo apt-get install python3-pip
 
 if [ -z $PIP ]; then
     echo '---- installing pip -----'
@@ -11,6 +12,16 @@ if [ -z $PIP ]; then
     echo '---- pip installed -----'
 else
     echo 'pip is already intalled.'
+fi
+
+PIP=$( virtualenv --version )
+
+if [ -z $VIRTUALENV_P ]; then
+    echo '---- intalling virtual env ----'
+    sudo apt-get install python3-virtualenv
+    echo '---- virtualenv installed -----'
+else
+    echo 'virtualenv is already intalled.'
 fi
 
 # create directory
@@ -22,9 +33,10 @@ mkdir $DEFAULT_PATH
 
 INITIATE_GIT=$( cd $DEFAULT_PATH && git init && git checkout -b main )
 
+# install virtual env
 
-# creating a virtual environment with Python
 
-# install the require version of python
+
+# 
 
 exit
