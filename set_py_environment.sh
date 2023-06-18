@@ -32,5 +32,6 @@ mkdir $DEFAULT_PATH
 INITIATE_GIT=$( cd $DEFAULT_PATH && git init && git checkout -b main && virtualenv env )
 
 echo 'py project was created'
+echo 'botão novo'
 
 exit
